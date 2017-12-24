@@ -1,17 +1,17 @@
 /*
-Example code to copy file from src file to dest file
+Example code to copy file from src file to dest file using scatter Gather IO
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcntl.h>
-#include <string.h>
 #include <sys/uio.h>
 #include <limits.h>
 #include <errno.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 //#define BUFF_SIZE (IOV_MAX*PAGE_SIZE)
 //#define IOV_MAX 8
@@ -22,8 +22,6 @@ int main(int argc, char* argv[]){
 	struct iovec writeIov[IOV_MAX];
 	ssize_t nr;
 	int readFd, writeFd;
-	
-    //int blockSize = PAGE_SIZE;
     long sz = sysconf(_SC_PAGESIZE);
     char *buff = (char *) malloc(sz * IOV_MAX);
     
