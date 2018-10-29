@@ -6,5 +6,5 @@ try to mimic linux cp command and try to achieve linux performance
 2. scaterGatherIO.c : will use readv() and writev() api
 
 ## Profile and Run commands:
-#### time ./copy_sg <src_file> <dst_file> <BLK_SIZE>
-#### time ./copy_normal <src_file> <dst_file> <BLK_SIZE>
+#### 1. time ./copy_sg <src_file> <dst_file> <BLK_SIZE>
+#### 2. time ./copy_normal <src_file> <dst_file> <BLK_SIZE>
