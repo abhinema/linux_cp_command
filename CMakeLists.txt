@@ -23,5 +23,5 @@ target_link_libraries(copy_normal ${LIBRARIES} ${ADDITIONAL_LIBRARIES})
 add_executable(copy_sg ${PROJECT_SOURCE_DIR}/src/scaterGatherIO.c)
 target_link_libraries(copy_sg ${LIBRARIES} ${ADDITIONAL_LIBRARIES})
 
-SET(CMAKE_C_COMPILER /usr/bin/gcc)
+#SET(CMAKE_C_COMPILER /usr/bin/gcc)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -Wall -Wextra -D_GLIBCXX_USE_CXX11_ABI=0 -march -mtune")
