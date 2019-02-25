@@ -23,9 +23,13 @@ target_link_libraries(copy_normal ${LIBRARIES} ${ADDITIONAL_LIBRARIES})
 add_executable(copy_sg ${PROJECT_SOURCE_DIR}/src/scaterGatherIO.c)
 target_link_libraries(copy_sg ${LIBRARIES} ${ADDITIONAL_LIBRARIES})
 
+add_executable(helloworld ${PROJECT_SOURCE_DIR}/src/helloworld.c)
+target_link_libraries(helloworld ${LIBRARIES} ${ADDITIONAL_LIBRARIES})
+
 #SET(CMAKE_C_COMPILER /usr/bin/gcc)
 #find_program(CMAKE_C_COMPILER NAMES $ENV{CC} gcc PATHS ENV PATH NO_DEFAULT_PATH)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -Wall -Wextra -D_GLIBCXX_USE_CXX11_ABI=0")
 
 install(TARGETS copy_normal DESTINATION bin)
 install(TARGETS copy_sg DESTINATION bin)
+install(TARGETS helloworld DESTINATION bin)
