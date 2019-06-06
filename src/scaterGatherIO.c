@@ -14,7 +14,7 @@ Example code to copy file from src file to dest file using scatter Gather IO
 #include <errno.h>
 
 //#define BUFF_SIZE (__IOV_MAX*PAGE_SIZE)
-//#define __IOV_MAX 8
+#define __IOV_MAX 8
 
 int main(int argc, char* argv[]){
 
